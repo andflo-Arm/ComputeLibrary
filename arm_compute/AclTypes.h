@@ -60,7 +60,7 @@ typedef enum AclStatus : int32_t
     AclInvalidTarget      = 5, /**< Call failed as invalid argument was passed */
     AclInvalidArgument    = 6, /**< Call failed as invalid argument was passed */
     AclUnsupportedConfig  = 7, /**< Call failed as configuration is unsupported */
-    AclInvalidObjectState = 8, /**< Call failed as an object has invalid state */
+    AclInvalidObjectState = 9, /**< Call failed as an object has invalid state */
 } AclStatus;
 
 /**< Supported CPU targets */
@@ -141,7 +141,7 @@ typedef struct AclContextOptions
     AclTargetCapabilities capabilities;       /**< Target capabilities */
     bool                  enable_fast_math;   /**< Allow precision loss */
     const char           *kernel_config_file; /**< Kernel cofiguration file */
-    int32_t       max_compute_units; /**< Max compute units that can be used by a queue created from the context.
+    uint32_t      max_compute_units; /**< Max compute units that can be used by a queue created from the context.
                                                    If <=0 the system will use the hw concurency insted */
     AclAllocator *allocator;         /**< Allocator to be used by all the memory internally */
 } AclContextOptions;

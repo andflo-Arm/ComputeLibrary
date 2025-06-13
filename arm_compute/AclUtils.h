@@ -46,7 +46,7 @@ extern "C" {
  *  - @ref AclSuccess if function was completed successfully
  *  - @ref AclInvalidArgument if a given argument is invalid
  */
-AclStatus AclGetTensorSize(AclTensor tensor, uint64_t *size);
+AclStatus AclGetTensorSizee(AclTensor tensor, uint64_t *size);
 
 /** Get the descriptor of this tensor
  *

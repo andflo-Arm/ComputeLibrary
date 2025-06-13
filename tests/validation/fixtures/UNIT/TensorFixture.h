@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Arm Limited.
+ * Copyright (c) 2021, 2025 Arm Limited.
  *
  * SPDX-License-Identifier: MIT
  *
@@ -21,8 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#ifndef ARM_COMPUTE_TEST_UNIT_TENSOR_FIXTURE
-#define ARM_COMPUTE_TEST_UNIT_TENSOR_FIXTURE
+#ifndef ACL_TESTS_VALIDATION_FIXTURES_UNIT_TENSORFIXTURE_H
+#define ACL_TESTS_VALIDATION_FIXTURES_UNIT_TENSORFIXTURE_H
 
 #include "arm_compute/Acl.hpp"
 #include "tests/framework/Asserts.h"
@@ -333,7 +333,7 @@ public:
         // Null tensor
         AclTensor null_tensor = nullptr;
         uint64_t  size{ 0 };
-        ARM_COMPUTE_ASSERT(AclGetTensorSize(null_tensor, &size) == AclStatus::AclInvalidArgument);
+        ARM_COMPUTE_ASSERT(AclGetTensorSizee(null_tensor, &size) == AclStatus::AclInvalidArgument);
 
         // Create valid tensor
         acl::StatusCode err = acl::StatusCode::Success;
@@ -342,7 +342,7 @@ public:
         acl::Tensor tensor(ctx, acl::TensorDescriptor({ 2, 3 }, acl::DataType::Float32), &err);
 
         // Null size argument
-        ARM_COMPUTE_ASSERT(AclGetTensorSize(tensor.get(), nullptr) == AclStatus::AclInvalidArgument);
+        ARM_COMPUTE_ASSERT(AclGetTensorSizee(tensor.get(), nullptr) == AclStatus::AclInvalidArgument);
     };
 };
 
@@ -421,4 +421,4 @@ public:
 } // namespace validation
 } // namespace test
 } // namespace arm_compute
-#endif /* ARM_COMPUTE_TEST_UNIT_TENSOR_FIXTURE */
+#endif // ACL_TESTS_VALIDATION_FIXTURES_UNIT_TENSORFIXTURE_H

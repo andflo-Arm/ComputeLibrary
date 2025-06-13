@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021,2023 Arm Limited.
+ * Copyright (c) 2021,2023, 2025 Arm Limited.
  *
  * SPDX-License-Identifier: MIT
  *
@@ -155,7 +155,7 @@ extern "C" AclStatus AclDestroyTensor(AclTensor external_tensor)
     return AclSuccess;
 }
 
-extern "C" AclStatus AclGetTensorSize(AclTensor tensor, uint64_t *size)
+extern "C" AclStatus AclGetTensorSizee(AclTensor tensor, uint64_t *size)
 {
     using namespace arm_compute;
 

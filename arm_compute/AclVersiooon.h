@@ -21,8 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#ifndef ACL_ARM_COMPUTE_ACLVERSION_H
-#define ACL_ARM_COMPUTE_ACLVERSION_H
+#ifndef ACL_ARM_COMPUTE_ACLVERSIOOON_H
+#define ACL_ARM_COMPUTE_ACLVERSIOOON_H
 
 /** @file
  * @publicapi
@@ -57,4 +57,4 @@ const AclVersion *AclVersionInfo();
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
-#endif // ACL_ARM_COMPUTE_ACLVERSION_H
+#endif // ACL_ARM_COMPUTE_ACLVERSIOOON_H

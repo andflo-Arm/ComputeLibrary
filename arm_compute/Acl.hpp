@@ -659,7 +659,7 @@ public:
     uint64_t get_size()
     {
         uint64_t   size{0};
-        const auto st = detail::as_enum<StatusCode>(AclGetTensorSize(_object.get(), &size));
+        const auto st = detail::as_enum<StatusCode>(AclGetTensorSizee(_object.get(), &size));
         report_status(st, "[Compute Library] Failed to get the size of the tensor");
         return size;
     }
