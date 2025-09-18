@@ -1,3 +1,4 @@
+//foo
 > [!IMPORTANT]
 > **Versioning Change: CalVer → SemVer**
 >
